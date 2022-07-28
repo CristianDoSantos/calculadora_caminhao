@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Balanço Traseiro</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <!-- começo -->
+    <main class="flex-fill">
+        <div class="container centro">
+            <div class="row justify-content-center">
+              <div class="col-10 col-md-8 col-lg-6 cor-fundo-escura rounded-3 p-4">
+                <div class="text-center mb-4">
+                    <h4>
+                        INFORME TODAS AS MEDIDAS EM MILÍMETROS!
+                    </h4>
+                </div>
+                <form action="" id="my-form">
+                    <div class="mb-3">
+                        <label for="comprimentoTotal" class="form-label">Comprimento Total</label>
+                        <input type="number" class="form-control" id="comprimentoTotal" placeholder="Ex: 10000">
+                    </div>
+                    <div class="mb-3">
+                        <label for="entreE" class="form-label">Entre Eixos</label>
+                        <input type="number" class="form-control" id="entreE" placeholder="Ex: 5000">
+                    </div>
+                    <div class="mb-3">
+                        <label for="balancoT" class="form-label">Balanço Traseiro</label>
+                        <input type="number" class="form-control" id="balancoT" placeholder="Ex: 2600">
+                    </div>
+                    <div class="mb-3">
+                        <label for="comprimentoCarroceria" class="form-label">Comprimento da Carroceria</label>
+                        <input type="number" class="form-control" id="comprimentoCarroceria" placeholder="Ex: 8500">
+                    </div>
+                    <div class="mb-3">
+                        <label for="largura" class="form-label">Largura</label>
+                        <input type="number" class="form-control" id="largura" placeholder="Ex: 2600
+                        ">
+                    </div>
+                    <button type="button" disabled="disabled" class="btn btn-primary w-100" id="botao" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  onclick="calcular()">
+                        Calcular
+                    </button>
+                </form>
+              </div>
+            </div>
+        </div>
+    </main>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Resultado</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="res">
+                    <br>
+                </div>
+                <p id="informacoes"></p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- fim -->
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+</body>
+</html>
